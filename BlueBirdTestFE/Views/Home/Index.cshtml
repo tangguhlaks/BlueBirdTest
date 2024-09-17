@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<hr />
+<section>
+    <div class="row">
+        <div class="col-md-12">
+           <table class="table table-bordered">
+               <thead>
+                   <tr>
+                       <th>Nik</th>
+                       <th>Nama</th>
+                       <th>Alamat</th>
+                       <th>NoTelpon</th>
+                       <th>Status</th>
+                       <th>Action</th>
+                   </tr>
+               </thead>
+               <tbody>
+                    @foreach (var v in ViewBag.datas)
+                    {
+                        <tr>
+                            <td>@v.Nik</td>
+                            <td>@v.Nama</td>
+                            <td>@v.Alamat</td>
+                            <td>@v.NoTelpon</td>
+                            <td>@v.Status</td>
+                            <td>
+                                <button class="btn btn-warning">Update</button>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+           </table>
+        </div>
+    </div>
+</section>
+
